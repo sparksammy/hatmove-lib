@@ -32,7 +32,7 @@ folder.Name = "miscparts191001101010"
 
 
 
-getgenv().makemovers = function(hhandle,pos,ppp1,boolerss,collide)
+getgenv().makemovers = function(hhandle,pos,ppp1,boolerss,collide,remmesh)
 local boolv
 if boolerss == nil or boolerss == "" then
 boolv = false
@@ -51,7 +51,11 @@ part.Name = "Random Generated part"
 local Attach1 = Instance.new("Attachment",part)
 local Attach2 = Instance.new("Attachment",hhandle)
 align(part,Attach2,Attach1,boolv)
-hhandle:FindFirstChildWhichIsA("SpecialMesh"):Destroy()
+if remmesh == true do
+          hhandle:FindFirstChildWhichIsA("SpecialMesh"):Destroy()
+else
+          print("remove mesh not specified, skip remove mesh.")
+end
 hhandle:BreakJoints()
 local ok = Instance.new("Motor6D",part)
 ok.Part0 = part
