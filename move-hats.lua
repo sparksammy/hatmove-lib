@@ -52,7 +52,7 @@ local Attach1 = Instance.new("Attachment",part)
 local Attach2 = Instance.new("Attachment",hhandle)
 align(part,Attach2,Attach1,boolv)
 hhandle:BreakJoints()
-hhandle.SpecialMesh:Destroy()
+hhandle:FindFirstChildWhichIsA("SpecialMesh"):Destroy()
 local ok = Instance.new("Motor6D",part)
 ok.Part0 = part
 ok.Part1 = part11
