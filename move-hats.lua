@@ -1,4 +1,4 @@
-if game.workspace:FindFirstChild("miscparts191001101010") == nil then
+if not game.workspace:FindFirstChild("miscparts191001101010") then
 print("--------------------------------------")
 print("               HatMover")
 print("")
@@ -56,7 +56,7 @@ align(part,Attach2,Attach1,boolv)
 if remmesh == true do
           hhandle:FindFirstChildWhichIsA("SpecialMesh"):Destroy()
 else
-          print("remove mesh not specified, skip remove mesh.")
+          print("remove mesh not specified/had non-true value, skip remove mesh.")
 end
 hhandle:BreakJoints()
 local ok = Instance.new("Motor6D",part)
