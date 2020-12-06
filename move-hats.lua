@@ -53,7 +53,7 @@ part.Name = "Random Generated part"
 local Attach1 = Instance.new("Attachment",part)
 local Attach2 = Instance.new("Attachment",hhandle)
 align(part,Attach2,Attach1,boolv)
-if remmesh == true do
+if remmesh == true then
           hhandle:FindFirstChildWhichIsA("SpecialMesh"):Destroy()
 else
           print("remove mesh not specified/had non-true value, skip remove mesh.")
